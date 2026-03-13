@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: mcp-gateway
+  ai:
+    mcp:
+      server:
+        name: mcp-gateway
+        version: 1.0.0
+        type: SYNC
+
+inventory:
+  api:
+    base-url: https://qa-cloudapi.ssgadm.com
