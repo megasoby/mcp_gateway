@@ -77,27 +77,27 @@
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    AI 에이전트 (클라이언트)                │
+│                    AI Agent (Client)                    │
 │                                                         │
 │  Cursor IDE    Gemini CLI    Claude Desktop    ChatGPT  │
 └────────────────────────┬────────────────────────────────┘
                          │ MCP (SSE / Streamable HTTP)
                          │
 ┌────────────────────────▼────────────────────────────────┐
-│                  MCP Gateway (Spring Boot)               │
+│                  MCP Gateway (Spring Boot)              │
 │                       :8082                             │
 │                                                         │
-│  ┌─────────────────┐  ┌─────────────────┐              │
-│  │ InventoryTool   │  │ PriceTool       │  ...         │
-│  │ queryInventory  │  │ queryPrice      │              │
-│  └────────┬────────┘  └────────┬────────┘              │
+│  ┌─────────────────┐  ┌─────────────────┐               │
+│  │ InventoryTool   │  │ PriceTool       │  ...          │
+│  │ queryInventory  │  │ queryPrice      │               │
+│  └────────┬────────┘  └────────┬────────┘               │
 └───────────┼────────────────────┼────────────────────────┘
             │ RestClient         │ RestClient
             │                   │
 ┌───────────▼────────────────────▼────────────────────────┐
-│                    사내 API 서버                          │
+│                   Internal API Server                   │
 │                                                         │
-│  재고 API              판매가 API           주문 API 등  │
+│  Inventory API        Price API          Order API ...  │
 └─────────────────────────────────────────────────────────┘
 ```
 
